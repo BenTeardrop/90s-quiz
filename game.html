@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>90's Quiz Game</title>
+</head>
+
+<body>
+    <h1 id="game-main-title">The 90's</h1>
+    <div id="game-area">
+        <div class="question-box">
+            <h2><span id="main-questions">questions</span></h2>
+            <div class="answers">
+                <ol>
+                    <li class="answer-box" onclick=selectAnswerA() id="a">answer A</li>
+                    <li class="answer-box" onclick=selectAnswerB() id="b">answer B</li>
+                    <li class="answer-box" onclick=selectAnswerC() id="c">answer C</li>
+                </ol>
+            </div>
+
+
+            <button type="button" id="submit-btn">submit</button>
+            <button type="button" id="next-question-btn">next</button>
+
+        </div>
+    </div>
+    <div id="score-section">
+        <p class="score-table">Score:<span id="score">0</span></p>
+    </div>
+
+    <a id='return-btn' href="index.html">back</a>
+
+    <script src="assets/js/script2.js"></script>
+
+</body>
+
+</html>

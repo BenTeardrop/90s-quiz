@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=VT323&display=swap');
+body {
+    background: url(/Users/benjaminjimenez/Documents/WebDevVSfiles/quiz/assets/images/bruno-guerrero-OzC7XnoEEno-unsplash.jpg);
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    color: #49ff15;
+    font-size: 350%;
+}
+
+h2,
+p {
+    font-family: 'VT323', monospace;
+    color: #49ff15;
+    font-size: 200%;
+}
+
+a,
+li {
+    color: #49ff15;
+    font-size: 250%;
+    font-family: 'VT323', monospace;
+    /* color: #15202b; */
+    /* border: 3px solid rgb(250, 235, 215); */
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+/* entrance page */
+
+#enter-the-game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+
+/* Game page */
+
+#game-main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+}
+
+#score-section,
+#return-btn {
+    display: flex;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+
+button {
+    color: #49ff15;
+    font-family: 'VT323', monospace;
+    background-color: black;
+}
+
+
+/* 
+.questions {
+    background-color: rgba(250, 235, 215, 0.9);
+    color: #15202b;
+} */
+
+.question-box {
+    border: 10px solid #1d2935;
+    background-color: rgba(46, 44, 42, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    /* width: 30%; */
+    margin: 20px;
+}
+
+.answer-box:hover {
+    background-color: #49ff15;
+    color: black;
+}
