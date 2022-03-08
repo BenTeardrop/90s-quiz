@@ -42,8 +42,6 @@ function showQuestion() {
     console.log(questionList[y].answers)
 }
 
-showQuestion();
-
 let next = document.getElementById('next-question-btn')
 
 function nextQuestion() {
@@ -59,3 +57,32 @@ function nextQuestion() {
 }
 
 next.addEventListener('click', nextQuestion);
+
+// function selectAnswerA() {
+//     if (selectAnswerA.innerHTML === correctAnswer) {
+//         score = score + 1;
+//     } else {
+
+//         answerA.innerHTML.color = 'red';
+//     }
+// }
+
+
+// function addScore() {
+
+//     if (answerBox.innerHTML === correctAnswer) {
+
+//         score = score + 1;
+//     } else {
+
+
+//         answerBox.innerHTML.style.color = 'red'
+
+//     }
+
+
+// }
+
+
+// submitAnswer.addEventListener('click', addScore)
+showQuestion()
