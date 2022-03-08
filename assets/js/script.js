@@ -53,6 +53,7 @@ function nextQuestion() {
 }
 
 next.addEventListener('click', nextQuestion);
+next.addEventListener('keypress', nextQuestion);
 
 const answers = document.querySelectorAll('.answer-box');
 
