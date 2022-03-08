@@ -65,9 +65,13 @@ answers.forEach(function (answer) {
         if (text === questionList[y].correctAnswer) {
             alert('correct answer');
             addScore ()
+            nextQuestion()
         } else {
+            // answerBox.style.backgroundColor = 'red'
             alert('wrong answer');
-            text.style.backgroundColor = "red";
+            nextQuestion()
+            answerA.innerHTML.style.backgroundColor = "red";
+            
         }
     }
 })
@@ -75,7 +79,7 @@ answers.forEach(function (answer) {
 function addScore () {
 
     let scoreCount = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++scoreCount;
+    document.getElementById("score").innerText = scoreCount + 50;
 
 }
 
