@@ -41,3 +41,21 @@ function showQuestion() {
     console.log(questionList[y].correctAnswer)
     console.log(questionList[y].answers)
 }
+
+showQuestion();
+
+let next = document.getElementById('next-question-btn')
+
+function nextQuestion() {
+
+    if (y < questionList.length - 1) {
+        y = y + 1;
+        showQuestion();
+    } else {
+        y = 0
+        showQuestion();
+    }
+
+}
+
+next.addEventListener('click', nextQuestion);
