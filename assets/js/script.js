@@ -19,3 +19,13 @@ let questionList = [{
     answers: ['The Righteous Brothers', 'The Isley brothers', 'The Blues Brothers'],
     correctAnswer: 'The Righteous Brothers',
 }]
+
+let answerA = document.getElementById('a');
+let answerB = document.getElementById('b');
+let answerC = document.getElementById('c');
+let mainQuestions = document.getElementById('main-questions');
+let y = 0
+let submitAnswer = document.getElementById('submit-btn');
+let score = document.getElementById('score');
+let answerBox = document.getElementsByClassName('answer-box')
+let correctAnswer = questionList[y].correctAnswer
