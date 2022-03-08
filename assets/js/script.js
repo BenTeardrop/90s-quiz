@@ -29,3 +29,15 @@ let submitAnswer = document.getElementById('submit-btn');
 let score = document.getElementById('score');
 let answerBox = document.getElementsByClassName('answer-box')
 let correctAnswer = questionList[y].correctAnswer
+
+function showQuestion() {
+
+
+    mainQuestions.innerHTML = questionList[y].question;
+    answerA.innerHTML = questionList[y].answers[0];
+    answerB.innerHTML = questionList[y].answers[1];
+    answerC.innerHTML = questionList[y].answers[2];
+
+    console.log(questionList[y].correctAnswer)
+    console.log(questionList[y].answers)
+}
