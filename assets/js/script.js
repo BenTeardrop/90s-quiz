@@ -26,10 +26,8 @@ let answerC = document.getElementById('c');
 let mainQuestions = document.getElementById('main-questions');
 let y = 0
 let submitAnswer = document.getElementById('submit-btn');
-let scoreCount = document.getElementById('score');
 let answerBox = document.getElementsByClassName('answer-box');
 let correctAnswer = questionList[y].correctAnswer;
-let score = 0
 
 function showQuestion() {
 
@@ -64,15 +62,21 @@ answers.forEach(function (answer) {
     answer.onclick = function (event) {
 
         const text = event.target.innerText;
-        console.log(text)
         if (text === questionList[y].correctAnswer) {
             alert('correct answer');
-
+            addScore ()
         } else {
             alert('wrong answer');
             text.style.backgroundColor = "red";
         }
     }
 })
+
+function addScore () {
+
+    let scoreCount = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++scoreCount;
+
+}
 
 showQuestion()
