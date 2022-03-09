@@ -50,9 +50,16 @@ function showNextQuestion() {
         document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
         // window.location.reload();
+        addEventListener('keypress', reloadGame)
         
     }
     
+}
+
+function reloadGame() {
+
+    window.location.reload();
+
 }
 
 function incrementScore () {
