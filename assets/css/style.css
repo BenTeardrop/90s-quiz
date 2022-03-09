@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=VT323&display=swap');
 
 body {
-    background: url(/assets/images/bruno-guerrero-OzC7XnoEEno-unsplash.jpg);
+    background: url(/assets/images/background-picture.jpg);
 }
 
 h1 {
@@ -17,17 +17,23 @@ p {
     font-size: 200%;
 }
 
-a,
 li {
     color: #49ff15;
-    font-size: 250%;
+    font-size: 150%;
     font-family: 'VT323', monospace;
     /* color: #15202b; */
     /* border: 3px solid rgb(250, 235, 215); */
-    text-decoration: none;
     padding: 10px;
 }
 
+a {
+    color: #49ff15;
+    font-size: 250%;
+    font-family: 'VT323', monospace;
+    text-decoration: none;
+    padding: 10px;
+
+}
 
 /* entrance page */
 
@@ -68,9 +74,11 @@ li {
 }
 
 button {
+    font-size: 150%;
     color: #49ff15;
     font-family: 'VT323', monospace;
     background-color: black;
+    padding: 10px;
 }
 
 
