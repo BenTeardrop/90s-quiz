@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=VT323&display=swap');
 
 body {
-    background: url(/assets/images/background-picture.jpg);
+    background: url(../images/background-picture.jpg);
 }
 
 h1 {

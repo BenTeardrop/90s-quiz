@@ -24,64 +24,68 @@ let answerA = document.getElementById('a');
 let answerB = document.getElementById('b');
 let answerC = document.getElementById('c');
 let mainQuestions = document.getElementById('main-questions');
-let y = 0
-let submitAnswer = document.getElementById('submit-btn');
-let answerBox = document.getElementsByClassName('answer-box');
-let correctAnswer = questionList[y].correctAnswer;
+let questionIndex = 0
+const answers = document.querySelectorAll('.answer-box');
+let next = document.getElementById('next-question-btn');
+let back = document.getElementById('return-btn')
+
+// let restart = window.location.reload();
+
 
 function showQuestion() {
-
-
-    mainQuestions.innerHTML = questionList[y].question;
-    answerA.innerHTML = questionList[y].answers[0];
-    answerB.innerHTML = questionList[y].answers[1];
-    answerC.innerHTML = questionList[y].answers[2];
+    mainQuestions.innerHTML = questionList[questionIndex].question;
+    answerA.innerHTML = questionList[questionIndex].answers[0];
+    answerB.innerHTML = questionList[questionIndex].answers[1];
+    answerC.innerHTML = questionList[questionIndex].answers[2];
 }
 
-let next = document.getElementById('next-question-btn')
 
-function nextQuestion() {
-
-    if (y < questionList.length - 1) {
-        y = y + 1;
+function showNextQuestion() {
+    if (questionIndex < questionList.length - 1) {
+        questionIndex = questionIndex + 1;
         showQuestion();
     } else {
-        y = 0
-        showQuestion();
+        // Game over scenario
+        mainQuestions.innerHTML = 'Game over!';
+        document.getElementById('answers').style.display = 'none';
+        next.style.display = 'none';
+        // window.location.reload();
+        
     }
-
+    
 }
 
-next.addEventListener('click', nextQuestion);
-next.addEventListener('keypress', nextQuestion);
-
-const answers = document.querySelectorAll('.answer-box');
-
-// iterate over all answers and add event listener
-answers.forEach(function (answer) {
-    // when the element is clicked, do something 
-    answer.onclick = function (event) {
-
-        const text = event.target.innerText;
-        if (text === questionList[y].correctAnswer) {
-            alert('correct answer');
-            addScore ()
-            nextQuestion()
-        } else {
-            // answerBox.style.backgroundColor = 'red'
-            alert('wrong answer');
-            nextQuestion()
-            answerA.innerHTML.style.backgroundColor = "red";
-            
-        }
-    }
-})
-
-function addScore () {
-
+function incrementScore () {
     let scoreCount = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = scoreCount + 50;
-
 }
 
-showQuestion()
+function onOptionClick(event) {
+    const eventTarget = event.target;
+    const selectedAnswer = eventTarget.innerText;
+    if (selectedAnswer === questionList[questionIndex].correctAnswer) {
+        incrementScore();
+        // eventTarget.style.backgroundColor = "#49ff15";
+        // eventTarget.style.color = "black";
+    } else {
+        eventTarget.style.color = "red";
+    }
+}
+
+function initEventListeners() {
+    // iterate over all answers and add event listener
+    answers.forEach(function (answer) {
+        // when the element is clicked, do something
+        answer.onclick = onOptionClick;
+    });
+
+    next.addEventListener('click', showNextQuestion);
+    addEventListener('keypress', showNextQuestion);
+}
+
+function startGame() {
+    initEventListeners();
+    showQuestion()
+}
+
+startGame();
