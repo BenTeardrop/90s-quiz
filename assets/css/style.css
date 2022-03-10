@@ -146,6 +146,7 @@ button {
     }
 
     #right_answer_table {
+        float:left;
         font-size: 120%;
         float: right;
         margin: 0;
