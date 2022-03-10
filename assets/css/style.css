@@ -66,12 +66,16 @@ a {
     flex-direction: column;
 }
 
-#score-section,
 #return-btn {
     display: flex;
     justify-content: center;
-    /* background-color: antiquewhite; */
 }
+
+#score-table{
+float: right;
+margin: 0;
+}
+
 
 button {
     font-size: 150%;
@@ -89,8 +93,8 @@ button {
 } */
 
 .question-box {
-    border: 10px solid #1d2935;
-    background-color: rgba(46, 44, 42, 0.95);
+    border: 20px solid black;
+    background-color: rgba(46, 44, 42, 1);
     padding: 20px;
     border-radius: 10px;
     width: 50%;

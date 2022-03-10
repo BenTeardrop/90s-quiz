@@ -37,6 +37,7 @@ function showQuestion() {
     answerA.innerHTML = questionList[questionIndex].answers[0];
     answerB.innerHTML = questionList[questionIndex].answers[1];
     answerC.innerHTML = questionList[questionIndex].answers[2];
+    selectedAnswer.style.color = '#49ff15'
 }
 
 
@@ -44,9 +45,10 @@ function showNextQuestion() {
     if (questionIndex < questionList.length - 1) {
         questionIndex = questionIndex + 1;
         showQuestion();
+        
     } else {
         // Game over scenario
-        mainQuestions.innerHTML = 'Game over!';
+        mainQuestions.innerHTML = `Game over! your score is`;
         document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
         // window.location.reload();
