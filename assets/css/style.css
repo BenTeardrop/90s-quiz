@@ -2,6 +2,7 @@
 
 body {
     background: url(../images/background-picture.jpg);
+    height: 600px;
 
 }
 
@@ -119,6 +120,10 @@ button {
 
 @media screen and (max-width: 800px) {
 
+    #main-title {
+
+        font-size: 250%;
+    }
 
     h1 {
 

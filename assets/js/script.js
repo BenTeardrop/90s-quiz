@@ -81,7 +81,7 @@ function showNextQuestion() {
         
     } else {
         // Game over scenario
-        mainQuestions.innerHTML = `Game over!`;
+        mainQuestions.innerHTML = "<h1>Game over!</h1>";
         document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
         addEventListener('keypress', reloadGame)
