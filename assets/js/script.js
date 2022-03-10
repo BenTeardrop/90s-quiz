@@ -18,6 +18,26 @@ let questionList = [{
     question: 'Which artist sang the hit “Unchained Melody” from the film Ghost?',
     answers: ['The Righteous Brothers', 'The Isley brothers', 'The Blues Brothers'],
     correctAnswer: 'The Righteous Brothers',
+}, {
+    question: 'In the 1991 film "Boyz n the Hood", which famous rapper starred alongside Cuba Gooding Jnr?',
+    answers: ['Ice-T', 'Ice Cube', 'Vanilla Ice'],
+    correctAnswer: 'Ice Cube',
+}, {
+    question: 'Which colored pill does Neo take in the "Matrix"?',
+    answers: ['Red', 'Green', 'Blue'],
+    correctAnswer: 'Red',
+}, {
+    question: 'What date is "Groundhog Day"?',
+    answers: ['March 31st', 'July the 14th', 'February 2nd'],
+    correctAnswer: 'February 2nd',
+}, {
+    question: 'Which box office smash about nuns starred Whoopi Goldberg?',
+    answers: ['Sister Act', 'ghost', 'the color purple'],
+    correctAnswer: 'Sister Act',
+}, {
+    question: '90s smash hit film Cruel Intentions is loosely based on which French novel?',
+    answers: ['Intense Liaisons', 'Dangerous Liaisons', 'Forbidden Liaisons'],
+    correctAnswer: 'Dangerous Liaisons',
 }]
 
 let answerA = document.getElementById('a');
