@@ -172,6 +172,7 @@ button {
     #score-table {
         display: flex;
         flex-direction: column-reverse;
+        margin-top: 20px;
     }
 
 }
