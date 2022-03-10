@@ -72,11 +72,16 @@ a {
     justify-content: center;
 }
 
-#score-table{
+#right_answer_table{
 float: right;
 margin: 0;
 }
 
+#wrong_answer_table{
+    float: left;
+    margin: 0;
+    color:red;
+    }
 
 button {
     font-size: 150%;

@@ -49,6 +49,7 @@ const answers = document.querySelectorAll('.answer-box');
 let next = document.getElementById('next-question-btn');
 let back = document.getElementById('return-btn')
 
+
 // let restart = window.location.reload();
 
 
@@ -57,7 +58,19 @@ function showQuestion() {
     answerA.innerHTML = questionList[questionIndex].answers[0];
     answerB.innerHTML = questionList[questionIndex].answers[1];
     answerC.innerHTML = questionList[questionIndex].answers[2];
+    // changeBackColor()
+
+
 }
+
+// function changeBackColor() {
+//     let answerBoxes = document.getElementsByClassName('answer-box')
+//     for (var i=0; i < answerBoxes.length; i++) {
+//         answerBoxes.style.color = "#49ff15";
+//         }
+
+
+// }
 
 
 function showNextQuestion() {
@@ -65,11 +78,11 @@ function showNextQuestion() {
     if (questionIndex < questionList.length - 1) {
         questionIndex = questionIndex + 1;
         showQuestion();
-       document.getElementsByClassName('answer-box').style = ""
+        
     } else {
         // Game over scenario
-        mainQuestions.innerHTML = `Game over! your score is`;
-        document.getElementById('answers').style.display = '#49ff15';
+        mainQuestions.innerHTML = `Game over!`;
+        document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
         addEventListener('keypress', reloadGame)
         
@@ -83,14 +96,14 @@ function reloadGame() {
 
 }
 
-function incrementScore () {
-    let scoreCount = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = scoreCount + 50;
+function incrementCorrectAnswer () {
+    let addScoreCount = parseInt(document.getElementById("right_answers").innerText);
+    document.getElementById("right_answers").innerText = addScoreCount + 1;
 }
 
-function substractScore () {
-    let scoreCount = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = scoreCount - 50;
+function incrementWrongAnswer () {
+    let wrongAnswerCount = parseInt(document.getElementById("wrong_answers").innerText);
+    document.getElementById("wrong_answers").innerText = wrongAnswerCount + 1;
 
 }
 
@@ -98,12 +111,12 @@ function onOptionClick(event) {
     const eventTarget = event.target;
     const selectedAnswer = eventTarget.innerText;
     if (selectedAnswer === questionList[questionIndex].correctAnswer) {
-        incrementScore();
-        eventTarget.style.backgroundColor = "#49ff15";
-        eventTarget.style.color = "black";
+        incrementCorrectAnswer();
+        // eventTarget.style.backgroundColor = "#49ff15";
+        // eventTarget.style.color = "black";
     } else {
-        substractScore()
-        eventTarget.style.color = "red";
+        incrementWrongAnswer()
+        // eventTarget.style.color = "red";
     }
 }
 
