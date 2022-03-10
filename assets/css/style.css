@@ -118,7 +118,14 @@ button {
     color: #49ff15;
 }
 
-@media screen and (max-width: 800px) {
+#game-over {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right:50px;
+}
+
+@media screen and (max-width: 900px) {
 
     #main-title {
 
@@ -135,17 +142,17 @@ button {
     }
 
     li {
-        font-size: 100%;
+        font-size: 120%;
     }
 
     #right_answer_table {
-        font-size: 70%;
+        font-size: 120%;
         float: right;
         margin: 0;
     }
     
     #wrong_answer_table {
-        font-size: 70%;
+        font-size: 120%;
         float: left;
         margin: 0;
         color: red;
