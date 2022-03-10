@@ -95,6 +95,7 @@ a {
 #score-table {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 button {
@@ -111,7 +112,7 @@ button {
     background-color: rgba(46, 44, 42, 1);
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
 }
 
 .answer-box:hover {
@@ -163,15 +164,14 @@ button {
         color: red;
     }
 
+    
+}
+
+@media screen and (max-width: 500px) {
+  
     #score-table {
         display: flex;
         flex-direction: column-reverse;
     }
-}
-
-@media screen and (max-width: 500px) {
-
-  
-    
 
 }
