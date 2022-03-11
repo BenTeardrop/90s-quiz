@@ -165,12 +165,12 @@ button {
 
     #right_answer_table {
         float: left;
-        font-size: 120%;
+        font-size: 1.8rem;
         margin: 0;
     }
 
     #wrong_answer_table {
-        font-size: 120%;
+        font-size: 1.8rem;
         float: left;
         margin: 0;
         color: red;
