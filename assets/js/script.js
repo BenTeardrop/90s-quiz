@@ -3,7 +3,7 @@ let questionList = [{
     answers: ['Porshe', 'Ford', 'Deloreane'],
     correctAnswer: 'Deloreane'
 }, {
-    question: 'what model T was the bady in terminator 2?',
+    question: 'what model T was the baddy in terminator 2?',
     answers: ['T-total', 'T-1000', 'T-2000'],
     correctAnswer: 'T-2000'
 }, {
