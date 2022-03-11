@@ -128,8 +128,7 @@ button {
 }
 
 .answer-box:hover {
-    background-color: #49ff15;
-    color: black;
+    opacity: 0.5;
 }
 
 ::marker {

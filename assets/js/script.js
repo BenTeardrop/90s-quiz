@@ -11,11 +11,11 @@ let questionList = [{
     answers: ['1991', '1994', '1996'],
     correctAnswer: '1994',
 }, {
-    question: 'Which artist sang the song “Oh, Pretty Woman” from the film Pretty Woman?',
+    question: 'Which artist sang the song "Oh, Pretty Woman" from the film Pretty Woman?',
     answers: ['Roy Orbison', 'Johnny Cash', 'clint Eastwood'],
     correctAnswer: 'Roy Orbison',
 }, {
-    question: 'Which artist sang the hit “Unchained Melody” from the film Ghost?',
+    question: 'Which artist sang the hit "Unchained Melody" from the film Ghost?',
     answers: ['The Righteous Brothers', 'The Isley brothers', 'The Blues Brothers'],
     correctAnswer: 'The Righteous Brothers',
 }, {
@@ -58,42 +58,38 @@ function showQuestion() {
     answerA.innerHTML = questionList[questionIndex].answers[0];
     answerB.innerHTML = questionList[questionIndex].answers[1];
     answerC.innerHTML = questionList[questionIndex].answers[2];
-    // changeBackColor()
-
-
+    resetOptionStyle() 
 }
 
-// function changeBackColor() {
-//     let answerBoxes = document.getElementsByClassName('answer-box')
-//     for (var i=0; i < answerBoxes.length; i++) {
-//         answerBoxes.style.color = "#49ff15";
-//         }
-
-
-// }
+function resetOptionStyle() {
+    let answerBoxes = document.getElementsByClassName('answer-box')
+    for (var i=0; i < answerBoxes.length; i++) {
+        answerBoxes[i].style.backgroundColor = "transparent";
+        answerBoxes[i].style.pointerEvents = "auto";
+        answerBoxes[i].style.color = "#49ff15";
+    }
+}
 
 
 function showNextQuestion() {
-    
+
     if (questionIndex < questionList.length - 1) {
         questionIndex = questionIndex + 1;
         showQuestion();
-        
+
     } else {
         // Game over scenario
         mainQuestions.innerHTML = "<h1 id='game-over'>Game over!</h1>";
         document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
         addEventListener('keypress', reloadGame)
-        
+
     }
-    
+
 }
 
 function reloadGame() {
-
     window.location.reload();
-
 }
 
 function incrementCorrectAnswer () {
@@ -107,16 +103,24 @@ function incrementWrongAnswer () {
 
 }
 
+function disableOptions() {
+    let answerBoxes = document.getElementsByClassName('answer-box')
+    for (var i=0; i < answerBoxes.length; i++) {
+        answerBoxes[i].style.pointerEvents = "none";
+    }
+}
+
 function onOptionClick(event) {
+    disableOptions();
     const eventTarget = event.target;
     const selectedAnswer = eventTarget.innerText;
     if (selectedAnswer === questionList[questionIndex].correctAnswer) {
         incrementCorrectAnswer();
-        // eventTarget.style.backgroundColor = "#49ff15";
-        // eventTarget.style.color = "black";
+        eventTarget.style.backgroundColor = "#49ff15";
+        eventTarget.style.color = "black";
     } else {
         incrementWrongAnswer()
-        // eventTarget.style.color = "red";
+        eventTarget.style.backgroundColor = "red";
     }
 }
 
