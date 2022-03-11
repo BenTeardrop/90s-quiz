@@ -64,9 +64,9 @@ The game over screen appears at the end when the player finishes the quiz, the q
 ### Validator testing
 
 html
-No errors were returned when passing through the official
+No errors were returned when passing through the official [W3C validator](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbenteardrop.github.io%2F90s-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 css
-No errors were found when passing through the official https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbenteardrop.github.io%2F90s-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+No errors were found when passing through the official  
 javascript
 No errors were found when passing through the official
 
