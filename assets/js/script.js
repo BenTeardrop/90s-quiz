@@ -50,8 +50,6 @@ let next = document.getElementById('next-question-btn');
 let back = document.getElementById('return-btn')
 
 
-// let restart = window.location.reload();
-
 
 function showQuestion() {
     mainQuestions.innerHTML = questionList[questionIndex].question;
@@ -125,9 +123,7 @@ function onOptionClick(event) {
 }
 
 function initEventListeners() {
-    // iterate over all answers and add event listener
     answers.forEach(function (answer) {
-        // when the element is clicked, do something
         answer.onclick = onOptionClick;
     });
 
