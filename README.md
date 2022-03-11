@@ -63,7 +63,7 @@ The game over screen appears at the end when the player finishes the quiz, the q
 
 went throught nemerous testing, made sure the score only increment on one clicking, stopping the user from being able to click multiple times. tried on iphone and firefox and safari and it seems to work.
 
-### Validator testing
+## Validator testing
 
 * html
  * No errors were returned when passing through the official [W3C validator](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbenteardrop.github.io%2F90s-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
@@ -81,7 +81,7 @@ went throught nemerous testing, made sure the score only increment on one clicki
    - The most complex function has a cyclomatic complexity value of 2 while the median is 1.
 
 
-### unfixed bugs
+## unfixed bugs
 
 n/a
 
@@ -96,22 +96,28 @@ n/a
 
 ## credits
 
-* The questions ans answers are taken from various websites mentioned in the content section
+* The questions ans answers are taken from various websites mentioned in the media section
 
-* I used a tutorial online just to get the basic structure mentioned in the content section
+* I used a tutorial online just to get the basic structure mentioned in the media section
 
 * i wanted to credit my mentor for helping me solve issues and for guiding me.
 
 
 ### content
 
-https://www.ultimatequizquestions.com/90s-movie-quiz/
-
-https://kidadl.com/articles/90s-movie-trivia-questions-about-an-iconic-decade-for-movies
-
-https://conversationstartersworld.com/90s-movie-trivia/
-
-https://www.youtube.com/watch?v=2jwdyO_UunE&ab_channel=WEBHUB
+n/a
 
 ### media
+
+- quiz website content.
+
+  - https://www.ultimatequizquestions.com/90s-movie-quiz/
+
+  - https://kidadl.com/articles/90s-movie-trivia-questions-about-an-iconic-decade-for-movies
+
+  - https://conversationstartersworld.com/90s-movie-trivia/
+
+- quiz tutorial
+
+  - https://www.youtube.com/watch?v=2jwdyO_UunE&ab_channel=WEBHUB
 
