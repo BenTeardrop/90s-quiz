@@ -38,16 +38,16 @@ let questionList = [{
     question: '90s smash hit film Cruel Intentions is loosely based on which French novel?',
     answers: ['Intense Liaisons', 'Dangerous Liaisons', 'Forbidden Liaisons'],
     correctAnswer: 'Dangerous Liaisons',
-}]
+}];
 
 let answerA = document.getElementById('a');
 let answerB = document.getElementById('b');
 let answerC = document.getElementById('c');
 let mainQuestions = document.getElementById('main-questions');
-let questionIndex = 0
+let questionIndex = 0;
 const answers = document.querySelectorAll('.answer-box');
 let next = document.getElementById('next-question-btn');
-let back = document.getElementById('return-btn')
+
 
 
 
@@ -56,11 +56,11 @@ function showQuestion() {
     answerA.innerHTML = questionList[questionIndex].answers[0];
     answerB.innerHTML = questionList[questionIndex].answers[1];
     answerC.innerHTML = questionList[questionIndex].answers[2];
-    resetOptionStyle() 
+    resetOptionStyle();
 }
 
 function resetOptionStyle() {
-    let answerBoxes = document.getElementsByClassName('answer-box')
+    let answerBoxes = document.getElementsByClassName('answer-box');
     for (var i=0; i < answerBoxes.length; i++) {
         answerBoxes[i].style.backgroundColor = "transparent";
         answerBoxes[i].style.pointerEvents = "auto";
@@ -80,7 +80,7 @@ function showNextQuestion() {
         mainQuestions.innerHTML = "<h1 id='game-over'>Game over!</h1>";
         document.getElementById('answers').style.display = 'none';
         next.style.display = 'none';
-        addEventListener('keypress', reloadGame)
+        addEventListener('keypress', reloadGame);
 
     }
 
@@ -102,7 +102,7 @@ function incrementWrongAnswer () {
 }
 
 function disableOptions() {
-    let answerBoxes = document.getElementsByClassName('answer-box')
+    let answerBoxes = document.getElementsByClassName('answer-box');
     for (var i=0; i < answerBoxes.length; i++) {
         answerBoxes[i].style.pointerEvents = "none";
     }
@@ -117,7 +117,7 @@ function onOptionClick(event) {
         eventTarget.style.backgroundColor = "#49ff15";
         eventTarget.style.color = "black";
     } else {
-        incrementWrongAnswer()
+        incrementWrongAnswer();
         eventTarget.style.backgroundColor = "red";
     }
 }
@@ -133,7 +133,7 @@ function initEventListeners() {
 
 function startGame() {
     initEventListeners();
-    showQuestion()
+    showQuestion();
 }
 
 startGame();

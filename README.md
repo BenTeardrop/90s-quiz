@@ -66,9 +66,17 @@ The game over screen appears at the end when the player finishes the quiz, the q
 html
 No errors were returned when passing through the official [W3C validator](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbenteardrop.github.io%2F90s-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 css
-No errors were found when passing through the official [(Jigsaw) validator] 
+No errors were found when passing through the official [(Jigsaw) validator](https://validator.w3.org/nu/?showsource=yes&showimagereport=yes&useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fbenteardrop.github.io%2F90s-quiz%2F)
 javascript
 No errors were found when passing through the official [Jshint validator]
+There are 12 functions in this file.
+
+Function with the largest signature take 1 arguments, while the median is 0.
+
+Largest function has 9 statements in it, while the median is 2.5.
+
+The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+
 
 ### unfixed bugs
 
