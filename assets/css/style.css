@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=VT323&display=swap');
 
+
+
 body {
     background: url(../images/background-picture.jpg);
     height: 600px;
@@ -30,8 +32,6 @@ li {
     color: #49ff15;
     font-size: 150%;
     font-family: 'VT323', monospace;
-    /* color: #15202b; */
-    /* border: 3px solid rgb(250, 235, 215); */
     padding: 10px;
 }
 
@@ -41,7 +41,8 @@ a {
     font-family: 'VT323', monospace;
     text-decoration: none;
     padding: 10px;
-
+    border: 2px solid #49ff15;
+    background-color:rgba(46, 44, 42, 0.7);
 }
 
 /* entrance page */
@@ -51,7 +52,7 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh;
+    margin-top: 8vh;
 }
 
 #rules {
@@ -88,7 +89,10 @@ a {
 
 #return-btn {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 20%;
+    margin: 0 auto;
 }
 
 
